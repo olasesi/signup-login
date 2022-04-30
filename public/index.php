@@ -26,8 +26,10 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+
 </head>
-<body>
+<body class="dark">
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
@@ -97,12 +99,18 @@
 			</div>
 		</div>
 	</div>
-	
+
+	<!--The toggle-->
+	<div class="mode">
+        Dark mode:            
+        <span class="change">OFF</span>
+    </div>
+    <!--The toggle--> 
 
 	<div id="dropDownSelect1"></div>
 	
 <!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/jquery/jquery.3.6.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
@@ -120,3 +128,22 @@
 
 </body>
 </html>
+
+
+
+
+ 
+
+
+
+<script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" ) && $( "wrap-login100" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
