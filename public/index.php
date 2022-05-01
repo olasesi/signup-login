@@ -24,24 +24,37 @@
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
 <!--===============================================================================================-->
-
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/themes.css">
 
 </head>
 <body class="dark">
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		
+		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+
+<!--theme-switch-wrapper-->
+			<div class="theme-switch-wrapper">
+       <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <div class="slider round"></div>
+  </label>
+    <em> Dark Mode</em>
+  </div>
+  <!--theme-switch-wrapper-->
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Type your username">
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Email address is required">
+						<span class="label-input100">Email address</span>
+						<input class="input100" type="text" name="Email address" placeholder="Type your Email address">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
@@ -96,16 +109,13 @@
 						</a>
 					</div>
 				</form>
+
+	
+
 			</div>
 		</div>
 	</div>
 
-	<!--The toggle-->
-	<div class="mode">
-        Dark mode:            
-        <span class="change">OFF</span>
-    </div>
-    <!--The toggle--> 
 
 	<div id="dropDownSelect1"></div>
 	
@@ -125,25 +135,18 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	<script src="js/themes.js"></script>
 </body>
 </html>
 
 
 
 
- 
 
 
 
-<script>
-        $( ".change" ).on("click", function() {
-            if( $( "body" ).hasClass( "dark" ) && $( "wrap-login100" ).hasClass( "dark" )) {
-                $( "body" ).removeClass( "dark" );
-                $( ".change" ).text( "OFF" );
-            } else {
-                $( "body" ).addClass( "dark" );
-                $( ".change" ).text( "ON" );
-            }
-        });
-    </script>
+
+
+
+
+
